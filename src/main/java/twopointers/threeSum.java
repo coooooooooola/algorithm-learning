@@ -1,5 +1,13 @@
-class Solution {
-    public List<List<Integer>> threeSum(int[] nums) {
+//三数之和
+package twopointers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+class threeSum {
+
+    public List<List<Integer>> solution(int[] nums) {
         Arrays.sort(nums);
         int len = nums.length;
         List<List<Integer>> result = new ArrayList<List<Integer>>();
