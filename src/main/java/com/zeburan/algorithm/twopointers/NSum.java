@@ -1,12 +1,49 @@
-//三数之和
+
 package com.zeburan.algorithm.twopointers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-class threeSum {
+/**
+ * N数之和的问题集
+ */
+class NSum {
+    /**
+     * 最接近的三数之和：https://leetcode.cn/problems/3sum-closest/description/
+     * @param nums
+     * @param target
+     * @return
+     */
+    public int threeSumClosest(int[] nums, int target) {
+        Arrays.sort(nums);
+        int result = Integer.MAX_VALUE;
+        int temp = 0;
+        int index2;
+        int index3;
+        for (int index1 = 0;index1<nums.length;index1++){
+            index2 = index1+1;
+            index3  = nums.length-1;
+            while(index2<index3){
+                temp = nums[index1] + nums[index2]  + nums[index3];
+                result  = Math.abs(result-target)<Math.abs(temp-target)?result:temp;
+                if (temp>target){
+                    index3--;
+                }else if (temp == target){
+                    return target;
+                }else{
+                    index2++;
+                }
+            }
+        }
+        return result;
+    }
 
+    /**
+     * 三数之和：https://leetcode.cn/problems/3sum/
+     * @param nums
+     * @return
+     */
     public List<List<Integer>> solution(int[] nums) {
         Arrays.sort(nums);
         int len = nums.length;
