@@ -1,5 +1,5 @@
 //接雨水 https://leetcode.cn/problems/container-with-most-water/description/
-package twopointers;
+package com.zeburan.algorithm.twopointers;
 public class maxArea {
     public int main(int[] height) {
         if (height.length<2){

@@ -1,4 +1,4 @@
-package number;
+package com.zeburan.algorithm.number;
 
 /**
  * Create by swtywang on 11/4/23 10:30 PM

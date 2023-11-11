@@ -1,5 +1,5 @@
 //三数之和
-package twopointers;
+package com.zeburan.algorithm.twopointers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
