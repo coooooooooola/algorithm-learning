@@ -1,4 +1,4 @@
-package com.zeburan.algorithm;
+package com.zeburan.algorithm.Strings;
 
 /**
  * Create by swtywang on 11/11/23 5:12 PM

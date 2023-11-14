@@ -1,4 +1,4 @@
-package com.zeburan.algorithm.number;
+package com.zeburan.algorithm.Numbers;
 
 /**
  * Create by swtywang on 11/4/23 10:30 PM
