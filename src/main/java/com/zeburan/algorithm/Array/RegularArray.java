@@ -1,5 +1,7 @@
 package com.zeburan.algorithm.Array;
 
+import java.util.Arrays;
+
 /**
  * Create by swtywang on 11/15/23 10:51 PM
  */
@@ -29,5 +31,23 @@ public class RegularArray {
             }
         }
         return res[0];
+    }
+
+    /**
+     * 274. H指数
+     * https://leetcode.cn/problems/h-index/description/?envType=study-plan-v2&envId=top-interview-150
+     * @param citations
+     * @return
+     */
+    public int hIndex(int[] citations) {
+        Arrays.sort(citations);
+        int count=0;
+        for (int i=0;i<citations.length;i++){
+            if (i+1>citations[citations.length-i-1]){
+                return i;
+            }
+            count++;
+        }
+        return count;
     }
 }
