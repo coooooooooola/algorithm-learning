@@ -1,4 +1,4 @@
-package com.zeburan.algorithm.DP;
+package com.zeburan.algorithm.DynamicProgramming;
 
 import java.util.ArrayList;
 import java.util.List;
