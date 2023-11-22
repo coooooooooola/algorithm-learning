@@ -30,4 +30,36 @@ public class Strings {
         }
         return -1;
     }
+
+    /**
+     * 58. 最后一个单词的长度 - 普通解法
+     * https://leetcode.cn/problems/length-of-last-word/description/?envType=study-plan-v2&envId=top-interview-150
+     * @param s
+     * @return
+     */
+    public int lengthOfLastWord(String s) {
+        if (!s.trim().isEmpty()) {
+            String[] strList = s.trim().split(" ");
+            return strList[strList.length - 1].length();
+        }
+        return 0;
+    }
+
+    /**
+     * ⭐ 58. 最后一个单词的长度 - 优化解法
+     * https://leetcode.cn/problems/length-of-last-word/description/?envType=study-plan-v2&envId=top-interview-150
+     * @param s
+     * @return
+     */
+    public int lengthOfLastWordI(String s) {
+        String s1 = s.trim();
+        int len = s1.length();
+
+        for (int i=len-1;i>=0;i--){
+            if (s1.charAt(i)==' '){
+                return len-1-i;
+            }
+        }
+        return len;
+    }
 }
